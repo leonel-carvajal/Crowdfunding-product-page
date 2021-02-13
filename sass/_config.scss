@@ -3,11 +3,13 @@
   --Dark-cyan: hsl(176, 72%, 28%);
   --Black: hsl(0, 0%, 0%);
   --Dark-gray: hsl(0, 0%, 48%);
+  --white:#fff;
 }
 $moderate-cyan:var(--Moderate-cyan);
 $darkcyan:var(--Dark-cyan);
 $black:var(--Black);
 $darkgray:var(--Dark-gray);
+$white:var(--white);
 //font
 @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap');
 $fontBody :'Commissioner';
@@ -16,8 +18,4 @@ body{
   font-family: $fontBody, sans-serif;
   font-size: 16px;
   font-weight: 400;
-}
-.header{
-  height: 200px;
-  background-color:$black;
 }
