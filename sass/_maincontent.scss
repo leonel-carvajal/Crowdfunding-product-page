@@ -1,0 +1,93 @@
+.main,.statics{
+height: 250px;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+background-color:$bgCard;
+border-radius: 20px;
+}
+.main{
+  transform: translateY(-20%);
+  position: relative;
+  &__logo{
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  &__logoTwo,&__link{
+    display: block;
+  }
+  &__link{
+    text-align: center;
+    text-decoration: none;
+    padding: 1em;
+    width: 70%;
+    background-color: $moderateCyan;
+    color: $white;
+    border-radius: 25px;
+  }
+  &__title{
+    padding-top: 1.5em;
+    font-size: 1.4em;
+    text-align: center;
+  }
+  &__info{
+    text-align: center;
+    color: $darkgray;
+  }
+  &__book{
+    display: none;
+  }
+}
+.statics{
+  margin-top: -35px;
+  height: 320px;
+  text-align: center;
+  &__title{
+    font-weight: 700;
+    font-size: 2em;
+    margin-bottom: 0;
+    &:first-child{
+      padding-top: 0.5em;
+    }
+  }
+  &__info{
+    color: $darkgray;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 40%;
+      display: block;
+      width: 20%;
+      height: 1px;
+      background-color: $darkgray;
+    }
+  }
+  &__bar{
+    width: 90%;
+    height: 12px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #ccc;
+    position: relative;
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 10px;
+      left: 0;
+      background-color: $moderateCyan;
+      height: inherit;
+      width: 80%;
+    }
+  }
+}
