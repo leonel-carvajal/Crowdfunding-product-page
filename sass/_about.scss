@@ -1,0 +1,80 @@
+.about{
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $white;
+  border-radius: 20px;
+  &__title{
+    padding-top: 0.5em;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__one,&__two{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    color: $darkgray;
+    text-align: justify;
+  }
+  &__two{
+    padding-bottom: 2em;
+  }
+}
+.prices{
+  &__card{
+    width: 90%;
+    height: 320px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid $darkgray;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    &--off{
+      opacity: 0.35;
+    }
+  }
+  &__title, &__pay{
+    text-align: left;
+    padding-left: 1em;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  &__pay{
+    color: $moderateCyan;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__info{
+    color: $darkgray;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
+  }
+  &__day{
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 700;
+    padding-left:0.5em;
+    margin-right: 10px;
+  }
+  &__left{
+    color: $darkgray;
+  }
+  &__button{
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+    background-color: $moderateCyan;
+    width: 150px;
+    border-radius: 20px;
+    color: $white;
+    margin-top: 20px;
+    margin-left: 15%;
+    &--off{
+      background-color: $darkgray;
+    }
+  }
+}
