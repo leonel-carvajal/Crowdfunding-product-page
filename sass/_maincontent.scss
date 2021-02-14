@@ -1,4 +1,7 @@
 .main,.statics{
+  @include laptop{
+    width: 60%;
+  }
 height: 250px;
 width: 90%;
 margin-left: auto;
@@ -7,6 +10,9 @@ background-color:$white;
 border-radius: 20px;
 }
 .main{
+  @include laptop{
+    transform: translateY(-40%);
+  }
   transform: translateY(-20%);
   position: relative;
   &__logo{
@@ -16,6 +22,9 @@ border-radius: 20px;
     transform: translateX(-50%);
   }
   &__div{
+    @include laptop{
+      position: relative;
+    }
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -23,7 +32,23 @@ border-radius: 20px;
   &__logoTwo,&__link{
     display: block;
   }
+  @include laptop{
+    &__logoTwo{
+      position: absolute;
+      top: -5px;
+      right: 30%;
+      cursor: pointer;
+    }
+  }
   &__link{
+    @include laptop{
+      width: 25%;
+      margin-left: 25px;
+      margin-right: 10%;
+      &:hover{
+        background-color: $darkcyan;
+      }
+    }
     text-align: center;
     text-decoration: none;
     padding: 1em;
@@ -42,13 +67,31 @@ border-radius: 20px;
     color: $darkgray;
   }
   &__book{
+    @include laptop{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1em;
+      height: 50px;
+      width: 150px;
+      background-color: $bgCard;
+      border-radius: 25px;
+      cursor: pointer;
+    }
     display: none;
   }
 }
 .statics{
   margin-top: -35px;
-  height: 320px;
+  height: 350px;
   text-align: center;
+  @include laptop{
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    place-items: center;
+  }
   &__title{
     font-weight: 700;
     font-size: 2em;
@@ -69,9 +112,19 @@ border-radius: 20px;
       width: 20%;
       height: 1px;
       background-color: $darkgray;
+      @include laptop {
+        width: 2px;
+        height: 70px;
+        top: -250%;
+        left: 120%;
+        background-color: $bgCard;
+      }
     }
   }
   &__bar{
+    @include laptop{
+      grid-column: span 3;
+    }
     width: 90%;
     height: 12px;
     border-radius: 10px;

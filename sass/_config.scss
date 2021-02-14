@@ -21,4 +21,14 @@ body{
   font-size: 16px;
   font-weight: 400;
   background-color: $bgCard;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: $moderateCyan;
+  width: 7px;
+  border-radius: 7px;
+}
+body::-webkit-scrollbar{
+  background-color: $black;
+  width: 7px;
 }

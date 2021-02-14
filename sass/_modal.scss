@@ -8,12 +8,26 @@
   transform: scale(0);
   transition: transform 0.5s;
   overflow-y: scroll;
+  @include laptop{
+    width: 99vw;
+    &::-webkit-scrollbar-thumb{
+      background-color: $moderateCyan;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar{
+      background-color: $bgCard;
+      width: 7px;
+    }
+  }
 }
 .show {
   transform: scale(1);
 }
 
 .modal {
+  @include laptop{
+    width: 60%;
+  }
   width: 90%;
   margin-right: auto;
   margin-left: auto;
@@ -23,18 +37,40 @@
 
   &__content {
     padding-bottom: 0.5em;
-
     & h2 {
+      @include laptop{
+        text-align: left;
+        margin-left: 50px;
+      }
       text-align: center;
     }
     & .prices__left{
       display: inline-block;
       margin-bottom: 25px;
+      @include laptop{
+        position: absolute;
+        top: 20px;
+        right: 30px;
+      }
+    }
+    & .prices__day{
+      @include laptop{
+        position: absolute;
+        top: 10px;
+        right: 70px;
+      }
     }
     & .prices__card {
+      @include laptop{
+        height: 180px;
+      }
       height: 300px;
       position: relative;
       &--active{
+        @include laptop{
+          height:250px;
+          border: 2px solid $moderateCyan;
+        }
         height: 400px;
         border: 1px solid $moderateCyan;
       }
@@ -64,12 +100,18 @@
   }
 
   &__close {
+    @include laptop{
+      cursor: pointer;
+    }
     position: absolute;
     top: 20px;
     right: 20px;
   }
 
   &__option {
+    @include laptop{
+      height: 150px;
+    }
     width: 90%;
     height: 220px;
     margin-right: auto;
@@ -112,7 +154,15 @@
   flex-direction: column;
   align-items: center;
   visibility: hidden;
+  @include laptop{
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
   &--active{
+    @include laptop{
+      height: 40%;
+    }
     visibility: visible;
   }
 
@@ -139,6 +189,8 @@
 
   &__link {
     display: inline-block;
+    outline: none;
+    border: none;
     text-align: center;
     width: 120px;
     text-decoration: none;
@@ -166,6 +218,9 @@ justify-content: center;
   }
 }
 .success{
+  @include laptop{
+    width: 40%;
+  }
   background-color: $white;
   width: 90%;
   height: 350px;
@@ -180,6 +235,9 @@ justify-content: center;
     margin-left: auto;
   }
   &__title{
+    @include laptop{
+      text-align: center;
+    }
     font-size: 1.5em;
     font-weight: 700;
   }
@@ -189,6 +247,9 @@ justify-content: center;
     line-height: 1.5em;
   }
   &__button{
+    @include laptop{
+      margin-left: 35%;
+    }
     display: inline-block;
     text-decoration: none;
     padding: 1em;

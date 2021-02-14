@@ -1,24 +1,43 @@
 .header {
+  @include tablet{
+    background-image: url('/images/image-hero-desktop.jpg');
+    position: relative;
+    height: 450px;
+  }
   height: 350px;
   background-image: url('/images/image-hero-mobile.jpg');
   background-repeat: no-repeat;
   background-position: 0 0;
   position: relative;
   &__logo{
+    @include tablet{
+      left: 100px;
+      top: 40px;
+    }
     position: absolute;
     top: 20px;
     left: 20px;
   }
   &__ham{
+    @include tablet{
+      display: none;
+    }
     position: absolute;
     top: 20px;
     right: 20px;
   }
 }
-// nav{
-//   height: 100%;
-// }
 .menu{
+  @include tablet{
+    background: none;
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+  }
   padding-left: 15px;
   margin-top: 0;
   list-style: none;
@@ -34,12 +53,25 @@
   align-items: start;
   justify-content: space-evenly;
   &__link{
+    @include tablet{
+      color: $white;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover{
+        border-bottom: 3px solid;
+      }
+    }
     color: $black;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.2em;
   }
   &__modal{
+    @include tablet{
+      transform: scale(1);
+      background: none;
+      position: static;
+    }
     position: fixed;
     z-index: 10;
     height: 100vh;
@@ -49,6 +81,9 @@
     transition: transform 0.5s;
   }
   &__close{
+    @include tablet{
+      display: none;
+    }
     position: absolute;
     top: 15px;
     right: 15px;

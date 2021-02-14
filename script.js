@@ -7,6 +7,7 @@ const modalClose = document.getElementById('modalClose')
 const selected = document.querySelectorAll('.selected__link')
 const modalSuccess = document.getElementById('modalSuccess')
 const goIt = document.getElementById('goIt')
+const pricesButton  =document.querySelectorAll('.prices__button')
 selected.forEach(item => {
   item.addEventListener('click', (e) => {
     container.classList.remove('show')
@@ -27,12 +28,21 @@ Array.from(divModalCircle).forEach(item => {
     e.target.parentElement.lastElementChild.classList.toggle('selected--active')
   })
 })
-
-goIt.addEventListener('click', () => {
+const Donate = () => {
   modalSuccess.classList.remove('modal__success--active')
-    Array.from(divModalCircle).forEach(item => {
-      item.classList.remove('modal__circle--selected')
-      item.parentElement.classList.remove('prices__card--active')
-      item.parentElement.lastElementChild.classList.remove('selected--active')
+  Array.from(divModalCircle).forEach(item => {
+    item.classList.remove('modal__circle--selected')
+    item.parentElement.classList.remove('prices__card--active')
+    item.parentElement.lastElementChild.classList.remove('selected--active')
   })
+}
+goIt.addEventListener('click',Donate)
+pricesButton[0].addEventListener('click', (e) => {
+  e.preventDefault()
+  container.classList.add('show')
+  
+})
+pricesButton[1].addEventListener('click', (e) => {
+  e.preventDefault()
+  container.classList.add('show')
 })
