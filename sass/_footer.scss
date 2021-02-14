@@ -1,0 +1,9 @@
+.footer{
+  &__attribution{
+    text-align: center;
+  }
+  &__page ,&__author{
+    font-weight: 700;
+    color: $moderateCyan;
+  }
+}

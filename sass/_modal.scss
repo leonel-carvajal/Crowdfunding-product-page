@@ -1,0 +1,149 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0);
+  transition: transform 0.5s;
+  overflow-y: scroll;
+}
+.show {
+  transform: scale(1);
+}
+
+.modal {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $white;
+  border-radius: 10px;
+  position: relative;
+
+  &__content {
+    padding-bottom: 0.5em;
+
+    & h2 {
+      text-align: center;
+    }
+
+    & .prices__card {
+      height: 350px;
+      position: relative;
+      &--active{
+        height: 420px;
+        border: 1px solid $moderateCyan;
+      }
+
+      &:last-child {
+        opacity: 0.4;
+      }
+    }
+
+    & .prices__button {
+      margin-bottom: 5px;
+      margin-left: 25%;
+    }
+  }
+
+  &__title {
+    padding: 0.5em;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  &__info {
+    color: $darkgray;
+    padding: 0.8em;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__option {
+    width: 90%;
+    height: 220px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    border: 1px solid $darkgray;
+    border-radius: 10px;
+    position: relative;
+
+    & h3 {
+      text-align: center;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid $darkgray;
+    &--selected::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      border-radius: 50%;
+      background-color: $moderateCyan;
+      top: 5px;
+      left: 5px;
+    }
+  }
+}
+
+.selected {
+  border-top: 1px solid $darkgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+  &--active{
+    visibility: visible;
+  }
+
+  &__info {
+    color: $darkgray;
+  }
+
+  &__price {
+    display: inline-block;
+    text-align: center;
+    padding: 1em;
+    width: 85px;
+    margin-left: -10px;
+    margin-right: 25px;
+    border-radius: 20px;
+    border: 1px solid $darkgray;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    &::first-letter {
+      color: $darkgray;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    text-decoration: none;
+    padding: 1em;
+    border: 1px solid $darkgray;
+    border-radius: 20px;
+    background-color: $moderateCyan;
+    color: $white;
+  }
+}

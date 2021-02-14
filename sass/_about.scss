@@ -21,6 +21,7 @@
   }
 }
 .prices{
+  padding-bottom: 0.5em;
   &__card{
     width: 90%;
     height: 320px;
@@ -72,7 +73,7 @@
     border-radius: 20px;
     color: $white;
     margin-top: 20px;
-    margin-left: 15%;
+    margin-left: 25%;
     &--off{
       background-color: $darkgray;
     }
