@@ -83,6 +83,9 @@
     color: $darkgray;
   }
   &__button{
+    @include laptop{
+      text-align: center;
+    }
     display: block;
     text-decoration: none;
     padding: 1em;
